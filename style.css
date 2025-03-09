@@ -1,0 +1,102 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Game Board */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 15px;
+    font-size: 2.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background 0.3s;
+}
+
+.cell:hover {
+    background: #ff4d79;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Status & Buttons */
+#status {
+    font-size: 1.4em;
+    margin: 15px;
+    font-weight: bold;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin: 5px;
+}
+
+button:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+    .board {
+        grid-template-columns: repeat(3, 90px);
+        grid-template-rows: repeat(3, 90px);
+    }
+
+    .cell {
+        width: 90px;
+        height: 90px;
+        font-size: 2em;
+    }
+}
